@@ -27,13 +27,29 @@
       <ul class="nav navbar-nav">
         <li><a href="#">Link</a></li>
       </ul>
+      <!-- Check if user is signed in -->
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+        <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to 'Sign in', new_user_session_path %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
+        <% end %>
         <li><a href="#">Link</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 <!-- Nav-bar -->
+
+<!-- Notice -->
+<% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 
 <%= yield %>
 
