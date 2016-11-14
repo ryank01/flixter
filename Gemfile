@@ -26,6 +26,15 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+#Use carrierwave
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+
+#Use figaro gem
+gem "figaro"
+
+#Use fog gem
+gem "fog"
+
 #User Twitter bootstrap
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
