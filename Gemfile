@@ -35,6 +35,9 @@ gem "figaro"
 #Use fog gem
 gem "fog"
 
+#Use minimagick
+gem 'mini_magick', '~> 4.3.1'
+
 #User Twitter bootstrap
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
