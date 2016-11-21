@@ -7,13 +7,13 @@ class LessonsController < ApplicationController
   private
   helper_method :current_lesson
 
-  def require_authorized_for_current_lesson
-    if current_lesson.section.course.user != current_user
-      redirect_to courses_path, alert: 'Please enroll in course to view lessons'
-    end
-  end
-
   def current_lesson
     @current_lesson ||= Lesson.find(params[:id])
+  end
+
+  def require_authorized_for_current_lesson
+    if ! current_user.enrolled_in?(current_lesson.section.course)
+      redirect_to courses_path, alert: 'Please enroll in course to view lessons'
+    end
   end
 end
