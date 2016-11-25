@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 #Use carrierwave
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 
+#Use stripe gem
+gem 'stripe'
+
 #Use figaro gem
 gem "figaro"
 
