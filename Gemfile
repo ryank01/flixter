@@ -32,6 +32,9 @@ gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 #Use stripe gem
 gem 'stripe'
 
+#Use ranked-model gem
+gem 'ranked-model'
+
 #Use figaro gem
 gem "figaro"
 
